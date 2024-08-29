@@ -1,0 +1,50 @@
+[
+  {
+    "uid": "1208633283907158030",
+    "petId": 1,
+    "animal": "Skunk Loves",
+    "hunger": 100,
+    "money": 5000,
+    "suspended": false
+  },
+  {
+    "uid": "1245119931356418141",
+    "petId": 2,
+    "animal": "Skunk2nd",
+    "hunger": 50,
+    "money": 1734,
+    "suspended": false
+  },
+  {
+    "uid": "1178697450681270282",
+    "petId": 3,
+    "animal": "Orange Cat",
+    "hunger": 50,
+    "money": 819,
+    "suspended": false
+  },
+  {
+    "uid": "1025405681714610187",
+    "petId": 4,
+    "animal": "Stefi",
+    "hunger": 50,
+    "money": 673,
+    "suspended": false
+  },
+  {
+    "uid": "1114660284204855367",
+    "petId": 5,
+    "animal": "Cat",
+    "hunger": 50,
+    "money": 182,
+    "suspended": false
+  },
+  {
+    "uid": "1172733484117266526",
+    "petId": 6,
+    "animal": "Kitten",
+    "hunger": 50,
+    "money": 126,
+    "suspended": false
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@discordjs/rest": "^2.3.0",
+    "axios": "^1.7.4",
+    "discord.js": "^14.15.3",
+    "glueapi": "^1.0.2",
+    "moment": "^2.30.1",
+    "ms": "^2.1.3",
+    "openai": "^4.53.1"
+  }
+}
