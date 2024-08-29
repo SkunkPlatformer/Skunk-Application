@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (discordInviteButton && allowDiscordAppCheckbox) {
         discordInviteButton.addEventListener('click', () => {
             const inviteCode = 'TJeE2vnMWm';
-            const discordAppUrl = `discord://discordapp.com/invite/${inviteCode}`;
+            const discordAppUrl = `discord://discord.com/invite/${inviteCode}`;
             const webInviteUrl = `https://discord.gg/${inviteCode}`;
 
             if (allowDiscordAppCheckbox.checked) {
