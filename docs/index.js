@@ -26,7 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (addAppButton) {
         addAppButton.addEventListener('click', () => {
             const oauthUrl = 'https://discord.com/oauth2/authorize?client_id=1257962930863865866&scope=bot%20applications.commands&permissions=8';
-            window.open(oauthUrl, '_blank');
+
+            // Define the dimensions and features for the pop-out window
+            const windowFeatures = 'width=600,height=600,scrollbars=yes,resizable=yes';
+
+            // Open the URL in a pop-out window
+            window.open(oauthUrl, 'discordAuth', windowFeatures);
         });
     }
 
@@ -85,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const copyEmailButton = document.getElementById('copy-email');
-    
+
     // Predefined email address to copy
     const emailToCopy = 'skunkplatformer@gmail.com';
 
