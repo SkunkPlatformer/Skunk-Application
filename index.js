@@ -27,7 +27,7 @@ const apiKey = 'acc_23944d2f121eb28';
 const apiSecret = '163338472c4bc8cc12323fed7f20149c';
 const witToken = 'QXZYQCZVHGDTXIGZLDAIIFIOQYBLAGJA';
 
-const allowedUserIds = ['1208633283907158030', '1025405681714610187', '1178697450681270282'];
+const allowedUserIds = ['User ID here'];
 
 const guildWelcomeCustom = new Map();
 const guildLeaveCustom = new Map();
@@ -263,13 +263,13 @@ const ADVERTISING_KEYWORDS = [
   'discord.gg',
 ];
 
-let guildIdOwner = 1257939495970410498;
-let petRegistered = 6;
+let guildIdOwner = "Guild ID Here";
+let petRegistered = 0;
 const token = config.token;
 const cid = config.clientId;
-const developerIds = ['1208633283907158030', '1025405681714610187', '1178697450681270282'];
+const developerIds = ["User ID here"];
 
-const announcementChannelId = '1267147983674277899'
+const announcementChannelId = 'Announcement Channel ID here'
 
 client.once('ready', async () => {
   client.user.setActivity("This Bot is Executing Commands.", { type: 4 });
@@ -294,7 +294,6 @@ client.once('ready', async () => {
   console.log(`Logged in as ${client.user.tag}!`);
   console.log(`The bot is in ${client.guilds.cache.size} guild(s).`);
 
-  // Configura las actividades del bot
   client.user.setActivity("SkunkAPP Has been Active", { type: 4 });
   setInterval(() => {
     client.user.setActivity("We have " + petRegistered + " Registered Pets", { type: 4 });
@@ -322,36 +321,6 @@ client.once('ready', async () => {
 const guildSafe = new Map();
 
 client.on('channelUpdate', async (oldChannel, newChannel) => {
-  // Check if the channel type is an announcement channel
-  if (newChannel.type === ChannelType.GuildAnnouncement) {
-    try {
-      const guild = newChannel.guild;
-      const auditLogs = await guild.fetchAuditLogs({ type: AuditLogEvent.ChannelUpdate, limit: 1 });
-      const logEntry = auditLogs.entries.first();
-
-      if (!logEntry) {
-        console.error('No audit log entry found for channel update');
-        return;
-      }
-
-      const executor = logEntry.executor;
-      const member = await guild.members.fetch(executor.id);
-
-      if (
-        !member.permissions.has(PermissionsBitField.Flags.BanMembers) ||
-        !member.permissions.has(PermissionsBitField.Flags.KickMembers) ||
-        !member.permissions.has(PermissionsBitField.Flags.ModerateMembers)
-      ) {
-        await newChannel.setType(ChannelType.GuildText);
-        await newChannel.send("<:service:1264476008858386452> You cannot change to Announcement Channel");
-
-        console.log(`Channel type changed back to text and message sent in ${newChannel.name}`);
-      }
-    } catch (error) {
-      console.error('Error handling channel update:', error);
-    }
-  }
-
   if (newChannel.type === ChannelType.GuildText && newChannel.nsfw) {
     if (!guildSafe.has(newChannel.guild.id)) {
       const embedWarn = new EmbedBuilder()
@@ -1952,7 +1921,7 @@ client.on('interactionCreate', async (interaction) => {
   }
 });
 
-let filterWords = ["fuck", "nigger", "nigga", "gay", "shit", "shitty", "ａ", "ｂ", "ｃ", "ｄ", "ｅ", "ｆ", "ｇ", "ｈ", "ｉ", "ｊ", "ｋ", "ｌ", "ｍ", "ｎ", "ｏ", "ｐ", "ｑ", "ｒ", "ｓ", "ｔ", "ｕ", "ｖ", "ｗ", "ｘ", "ｙ", "ｚ", "Ａ", "Ｂ", "Ｃ", "Ｄ", "Ｅ", "Ｆ", "Ｇ", "Ｈ", "Ｉ", "Ｊ", "Ｋ", "Ｌ", "Ｍ", "Ｎ", "Ｏ", "Ｐ", "Ｑ", "Ｒ", "Ｓ", "Ｔ", "Ｕ", "Ｖ", "Ｗ", "Ｘ", "Ｙ", "Ｚ", "mrd", "fucker", "fucke", "motherfuck", "motherfucking"];
+let filterWords = ["Filter Word here"];
 let muteUsers = [];
 
 // Command collection
@@ -1992,7 +1961,7 @@ const messageLimit = 2;
 const messageLimitKick = 10;
 
 const messageCounts = {};  // Object to store user message counts
-const developerIDs = ["1208633283907158030", "1025405681714610187"];
+const developerIDs = ["User ID here (again)"];
 
 let antispam = true;
 let filter = true;
@@ -2026,12 +1995,6 @@ client.on('channelCreate', async (channel) => {
     } catch (error) {
       console.error('Error modifying channel:', error);
     }
-  }
-
-  if (channel && channel.name === "approved") {
-    channel.send("<:protect:1264475813814997053>Server Approved:\nSkunkPlatform reviewed the server and your server is now protected. You can DM 'skunkplatform' for more info.");
-  } else if (channel && channel.name === "disabled_protection") {
-    channel.send("<:blue_warning:1264748712668827688>Server Protection was Disabled:\nSkunkPlatform reviewed your server and found that it violates the Community Guidelines. Please read the Rules on the SkunkAPP server:\nhttps://discord.gg/s7gahNph4r\nPlease Don't send the Link or Scam or Spamming Servrs or Others!");
   }
 
   // Check if the created channel is a text channel and has the specific name
