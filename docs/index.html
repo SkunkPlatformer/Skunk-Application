@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>SkunkApp</title>
+</head>
+<body>
+    <div class="container1">
+        <div class="div-header">
+            <button type="button" id="header-type1" class="header-menu">Menu</button>
+            <button type="button" id="header-info" class="header-info">Info</button>
+            <button type="button" id="header-hdevelopers" class="header-hdevelopers">Help Developers</button>
+        </div>
+        <div id="info-box" style="display: none;">
+            <h1>How to Use:</h1>
+            <p>Use with the !help to view More Commands.</p>
+        </div>
+        <div id="menu-box" style="display: none;">
+            <input type="checkbox" name="display-discord-app" id="allow-discord-app">
+            <label for="allow-discord-app">Allows: Open Discord App</label>
+            <button id="discord-invite">Join Server</button>
+        </div>
+        <div id="help-developers" style="display: none;">
+            <h1>Help Developers</h1>
+            <p>If you need assistance, please contact our development team.</p>
+            <button id="copy-email">Copy E-Mail</button>
+        </div>
+    </div>
+    <div class="center-container">
+        <div id="discord-bot-box">
+            <button id="show-hide-box">Show/Hide</button>
+            <div id="box-shown" style="display: none;">
+                <img src="https://top.gg/_next/image?url=https%3A%2F%2Fimages.discordapp.net%2Favatars%2F1257962930863865866%2Fd1982ffa5fe9b64a546ddeaa4bca9ed7.png%3Fsize%3D128&w=128&q=75" alt="" style="width: 50px; height: 50px; border-radius: 5px;">
+                <p><b>SkunkAPP</b></p>
+                <p><b>Script Type: Node.js</b></p>
+                <b><button id="add-app">Add App</button></b>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
